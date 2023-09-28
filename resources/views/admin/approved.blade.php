@@ -1,20 +1,20 @@
 @extends('admin.admin')
 @section('admin')
-<div class="container-fluid py-4">
+<div class="py-4 container-fluid">
   <div class="row">
-    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+    <div class="mb-4 col-xl-3 col-sm-6 mb-xl-0">
       <div class="card">
-        <div class="card-body p-3">
+        <div class="p-3 card-body">
           <div class="row">
             <div class="col-4 text-end">
-              <div class="icon icon-shape bg-gradient-info shadow text-center border-radius-md">
-                <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
+              <div class="text-center shadow icon icon-shape bg-gradient-info border-radius-md">
+                <i class="text-lg ni ni-paper-diploma opacity-10" aria-hidden="true"></i>
               </div>
             </div>
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Approved</p>
-                <h5 class="font-weight-bolder mb-0">
+                <p class="mb-0 text-sm text-capitalize font-weight-bold">Approved</p>
+                <h5 class="mb-0 font-weight-bolder">
                   <?php 
                   $approvedApplications = App\Models\Leave_Application::where('status', 'APPROVED')->count();
                   ?>
@@ -26,19 +26,19 @@
         </div>
       </div>
     </div>
-    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+    <div class="mb-4 col-xl-3 col-sm-6 mb-xl-0">
       <div class="card">
-        <div class="card-body p-3">
+        <div class="p-3 card-body">
           <div class="row">
             <div class="col-4 text-end">
-              <div class="icon icon-shape bg-gradient-info shadow text-center border-radius-md">
-                <i class="ni ni-watch-time text-lg opacity-10" aria-hidden="true"></i>
+              <div class="text-center shadow icon icon-shape bg-gradient-info border-radius-md">
+                <i class="text-lg ni ni-watch-time opacity-10" aria-hidden="true"></i>
               </div>
             </div>
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Pending</p>
-                <h5 class="font-weight-bolder mb-0">
+                <p class="mb-0 text-sm text-capitalize font-weight-bold">Pending</p>
+                <h5 class="mb-0 font-weight-bolder">
                 <?php 
                   $pendingApplications = App\Models\Leave_Application::where('status', 'PENDING')->count();
                   ?>
@@ -50,19 +50,19 @@
         </div>
       </div>
     </div>
-    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+    <div class="mb-4 col-xl-3 col-sm-6 mb-xl-0">
       <div class="card">
-        <div class="card-body p-3">
+        <div class="p-3 card-body">
           <div class="row">
             <div class="col-4 text-end">
-              <div class="icon icon-shape bg-gradient-info shadow text-center border-radius-md">
-                <i class="ni ni-fat-remove text-lg opacity-10" aria-hidden="true"></i>
+              <div class="text-center shadow icon icon-shape bg-gradient-info border-radius-md">
+                <i class="text-lg ni ni-fat-remove opacity-10" aria-hidden="true"></i>
               </div>
             </div>
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Rejected</p>
-                <h5 class="font-weight-bolder mb-0">
+                <p class="mb-0 text-sm text-capitalize font-weight-bold">Rejected</p>
+                <h5 class="mb-0 font-weight-bolder">
                 <?php 
                   $rejectedApplications = App\Models\Leave_Application::where('status', 'REJECTED')->count();
                   ?>
@@ -79,13 +79,13 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <div class="card-body p-3">
+            <div class="p-3 card-body">
                 <div class="container">
                     <a href="{{route('admin.dashboard')}}" class="heading">Pending</a>
                     <a href="{{route('tickets.approved')}}" class="heading active">Approved</a>
                     <a href="{{route('tickets.rejected')}}" class="heading">Rejected</a>
                 </div>
-                <div class="table-responsive mt-4">
+                <div class="mt-4 table-responsive">
                     <table class="table table-striped">
                         <thead>
                             <tr>
